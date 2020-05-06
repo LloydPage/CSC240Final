@@ -60,9 +60,17 @@ def Preprocessing():
             if pandas.isna(data.iloc[y][x]):
                 droplist.append(y)
     data=data.drop(droplist)
+    data['year'] = data['year'].astype(str)
+    data['Name'] = data[['Name', 'year']].agg('_'.join, axis=1)
+    data = data.drop(['year'], axis=1)
+    
+
     return data
 
 def main():
     data=Preprocessing() #data should include properly cleaned data for use in the algorithms
+    data.to_csv('Cluster_Set.csv', index=False)
+    
+    print("Finished Data Preprocessing")
 if __name__=="__main__": 
     main() 
