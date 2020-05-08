@@ -1,4 +1,5 @@
 # CSC240Final
+# By Lloyd Page and Colin Schultz
 Data set is from world bank, classification is from IMF.
 Run main.py to create the Cluster_set.csv of data
 Run cluster.py to create a visualization and cluster_set_results.csv
