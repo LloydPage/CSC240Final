@@ -76,7 +76,7 @@ def main():
         plt.legend(loc='lower right', borderpad=0, handletextpad=0)
         plt.axis("tight")
 
-        plt.figure()
+        #plt.figure()
         plt.show()
 
 
